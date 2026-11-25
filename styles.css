@@ -140,3 +140,19 @@ footer small{font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-tra
 .frame.empty::after,.player.empty::after{content:"Add a .webp photo";font-family:var(--sans);font-weight:300;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--soft)}
 .player.empty .play{display:none}
 @media (prefers-reduced-motion:reduce){.ph img,.hero .banner{opacity:1}}
+
+/* ================= floating music button ================= */
+#music{position:fixed;left:0;top:0;z-index:50;width:52px;height:52px;padding:0;border-radius:50%;border:1px solid var(--line);color:var(--ink);background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);display:grid;place-items:center;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;box-shadow:0 10px 30px -12px rgba(0,0,0,.45);transition:transform .3s,color .4s,border-color .4s}
+#music:hover{color:var(--copper);border-color:var(--copper)}
+#music:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+#music.drag{cursor:grabbing;transform:scale(1.08)}
+#music svg{grid-area:1/1;width:20px;height:20px;fill:currentColor}
+#music .i-pause{display:none}
+#music.on .i-play{display:none}
+#music.on .i-pause{display:block}
+#music.on{color:var(--copper);border-color:var(--copper)}
+#music.on::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--copper);pointer-events:none;animation:mpulse 2.8s ease-out infinite}
+#music.off{opacity:.45}
+@keyframes mpulse{from{transform:scale(1);opacity:.55}to{transform:scale(1.55);opacity:0}}
+#music .lab{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);white-space:nowrap;pointer-events:none;font-family:var(--sans);font-weight:300;font-size:10px;line-height:1;letter-spacing:.26em;text-transform:uppercase;color:var(--soft);text-shadow:0 0 10px var(--bg),0 0 4px var(--bg);transition:color .4s}
+#music:hover .lab,#music.on .lab{color:var(--copper)}
