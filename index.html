@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luna Solace · Forever Our Girl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="#home" data-p="home">Home</a>
+  <a href="#photos" data-p="photos">Photos</a>
+  <a href="#videos" data-p="videos">Videos</a>
+  <button id="theme" aria-label="Toggle light or dark">☾</button>
+</nav>
+
+<!-- HOME -->
+<section class="page" id="home">
+  <div class="hero" id="hero"></div>
+  <div class="hero-title">
+    <h1>Luna Solace</h1>
+    <p>Forever our girl</p>
+  </div>
+  <div class="wrap">
+    <p class="dates">A soft little soul, always with us.</p>
+    <div class="note">
+      <p>You were the comfort we never knew our hearts needed, and the happiness we never imagined living without.
+
+Thank you for every gentle purr, every sleepy moment, every slow blink, and all the little things that made ordinary days feel like home. You made life softer just by being in it.
+
+Though we wish we could hold you a little longer, every moment with you will forever have a place in our hearts.
+
+This is a gentle little place to remember you, celebrate the love you gave, and keep you close, always.</p>
+      <span class="sig">Your Mimi &amp; Didi</span>
+    </div>
+    <div class="facts">
+      <div class="fact"><small>Breed</small><span>Pure Persian</span></div>
+      <div class="fact"><small>Coat</small><span>Ash grey</span></div>
+      <div class="fact"><small>Little details</small><span>Copper-brown paws</span></div>
+    </div>
+    <div class="cta">
+      <a class="btn fill" href="#photos">Her Photos</a>
+      <a class="btn" href="#videos">Her Videos</a>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section class="page" id="photos">
+  <div class="wrap">
+    <div class="head"><h2>Moments</h2><p>Soft little pieces of her, kept safe.</p></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="page" id="videos">
+  <div class="wrap">
+    <div class="head"><h2>Her Little Films</h2><p>Press play whenever you miss her.</p></div>
+    <div class="vgrid" id="vgrid"></div>
+  </div>
+</section>
+
+<footer>
+  <span class="s">Luna Solace</span>
+  <small>Loved always · Mimi &amp; Didi</small>
+</footer>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lbx" id="lbx" aria-label="Close">&times;</button>
+  <button class="lbn prev" id="lbp" aria-label="Previous photo">&#8249;</button>
+  <div class="box" id="lbbox"></div>
+  <button class="lbn next" id="lbnx" aria-label="Next photo">&#8250;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
